@@ -5,7 +5,7 @@
   "background_color": "#fff",
   "display": "standalone",
   "Scope": "/",
-  "start_url": ".",
+  "start_url": "https://lucas1004jx.github.io/horaDeLevantar/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
