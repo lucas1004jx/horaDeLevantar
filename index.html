@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A que hora te levantas</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="page question-1">
+            <div class='inner-container'>
+                <h2>Hola</h2>
+                <p class="descri">¿Como te llamas?</p>
+                <form action="">
+                    <input type="text" name="name" value="" placeholder="escribe tu nombre">
+                </form>
+                <button class="next">siguiente</button>
+            </div>
+        </div>
+
+        <div class="page question-2">
+            <div class="inner-container">
+                <h2>Hola, <span class="user-name"></span></h2>
+                <p class="descri">¿Mañana a que hora te entras a trabajar?</p>
+                <form action="">
+                    <input type="text" name="hora-entra" value="" placeholder="0">H
+                    <input type="text" name="minutos-entra" value="" placeholder="0">Mins
+                </form>
+                <button class="next">siguiente</button>
+            </div>
+
+        </div>
+
+        <div class="page question-3">
+            <div class="inner-container">
+                <h2>Hola, <span class="user-name"></span></h2>
+                <p class="descri">¿Cuanto tiempo antes tienes que levantarte ?</p>
+                <form action="">
+                    <input type="text" name="hora-prepara" value="" placeholder="0">H
+                    <input type="text" name="minutos-prepara" value="" placeholder="0">Mins
+                </form>
+                <button class="next">siguiente</button>
+            </div>
+        </div>
+
+        <div class="page main-page">
+            <div class="inner-container">
+                <h2>Hola,<span class="user-name"></span></h2>
+                <p class="descri marginBottom0">Mañana entras a las <span class="hora-entra em"></span> <span class="em">:</span><span class="minutos-entra em"></span></p>
+                <p class="descri">Mañana te levantas a las</p>
+                <div class="screen">
+                    <p class="hora">00</p>
+                    <span>:</span>
+                    <p class="minutos">00</p>
+                </div>
+                <p class="descri">Tienes <span class="hora-prepara"></span><span class="minutos-prepara"></span>
+                    para preparar!</p>
+            </div>
+            <div class="setting">
+                Configuración
+            </div>
+            <div class="setting-overlay">
+                <svg viewBox="0 0 34 35" class="cancel">
+                    <use xlink:href="cancel.svg#cancel"></use>
+                </svg>
+                <div class="user-info">
+                    <div class="name-info">
+                        <p>name:</p>
+                        <p class="user-name"></p>
+                        <form action="">
+                                <input type="text" name="newName" value="" placeholder="nuevo nombre">confirmar
+                        </form>
+                        
+                        <p class="change-btn change-name">cambia nombre</p>
+                        <p class="change-btn confirm-name">confirmar</p>
+                    </div>
+                    <div class="time-info">
+                        <p>tiempo para prepararse:<br /> </p>
+                        <div>
+                          <p class="hora-prepara"></p>
+                          <p class="minutos-prepara"></p>
+                        </div> 
+                        <form action="" class="changeTimeForm">
+                                <input type="text" name="newHora" value="" placeholder="0">H
+                                <input type="text" name="newMin" value="" placeholder="0">Mins
+                            </form>
+                        <p class=" change-btn change-time">cambia tiempo</p>
+                        <p class="change-btn confirm-time">confirmar</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+          });
+        }
+        </script>
+</body>
+
+</html>

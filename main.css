@@ -1,0 +1,239 @@
+/* #50E3C2 
+#4A4A4A*/
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+   
+}
+
+.marginBottom0{
+    margin-bottom: 0;
+}
+
+[class*="question"]{
+    background-color: #50E3C2;
+}
+.container{
+    white-space: nowrap;
+    transition: 0.5s transform linear;
+    font-size: 0;
+}
+.page{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    display:inline-block;
+    color:#fff;
+    font-family:'Ubuntu', sans-serif;
+    
+}
+
+.page h2{
+    display: inline-block;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family:'Ubuntu', sans-serif;
+}
+
+.page .inner-container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: normal;
+    font-size: 16px;
+}
+.inner-container .user-name{
+    text-transform: capitalize;
+}
+.inner-container .descri{
+    font-size: 24px;
+    max-width: 90%;
+    text-align: center;
+}
+.inner-container input{
+    background: #50E3C2;
+   border:none;
+   border-bottom: 2px solid #fff;
+   width: 50px;
+   text-align: center;
+   margin-top: 30px;
+   display:inline-block;
+   padding: 10px;
+   padding-bottom: 2px;
+   font-size: 30px;
+   color:#fff;
+   text-transform: capitalize;
+}
+.inner-container input[name='name']{
+    width: 200px;
+}
+.inner-container input::placeholder{
+    color:rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.inner-container input:focus{
+    outline: none;
+}
+.inner-container input:focus::placeholder{
+    color:transparent;
+}
+.inner-container button{
+    position: absolute;
+    bottom: 0;
+    background-color: #4A4A4A;
+    color:#fff;
+    margin-top: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.main-page{
+    color:#4A4A4A;
+}
+
+.main-page .screen{
+    background-color: #50E3C2;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 36px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.main-page .screen p{
+    margin: 0;
+}
+
+.main-page .em{
+    font-weight: bold;
+    color:#50E3C2;
+}
+.setting{
+    display: inline-block;
+    position: absolute;
+    top:10px;
+    right:10px;
+    background-color: #50E3C2;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.setting:hover{
+    color:#4A4A4A;
+}
+
+.setting-overlay{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background-color: #4A4A4A;
+    padding: 50px 5%;
+    display:none;
+}
+.setting-overlay .cancel{
+    height:30px;
+    position:absolute;
+    top:10px;
+    right:10px;
+    cursor: pointer;
+}
+.setting-overlay .user-info{
+    margin-top: 50px;
+}
+.setting-overlay .user-info p{
+    font-size: 24px;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+.setting-overlay .user-info div + div{
+margin-top: 30px;
+}
+.setting-overlay .user-info .user-name{
+    color:#50E3C2;
+}
+.setting-overlay  .change-btn{
+    background:#50E3C2;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display:inline-block;
+    cursor: pointer;
+}
+
+.setting-overlay .time-info .hora-prepara,.setting-overlay .time-info .minutos-prepara{
+    display: inline-block;
+    color:#50E3C2;
+}
+.setting-overlay .time-info {
+    font-size: 16px;
+    color:#fff;
+}
+.setting-overlay input{
+   background: #fff;
+   border:none;
+   border-bottom: 2px solid #fff;
+   width:50px;
+   text-align: center;
+   margin-top: 5px;
+   display:inline-block;
+   padding: 10px;
+   padding-bottom: 2px;
+   font-size: 20px;
+   color:#4A4A4A;
+   text-transform: capitalize;
+   display: none;
+}
+.setting-overlay input::placeholder{
+    color:rgba(74, 74, 74, 0.5);
+    text-transform: uppercase;
+}
+.setting-overlay input:focus{
+    outline: none;
+}
+.setting-overlay input:focus::placeholder{
+    color:transparent;
+}
+.setting-overlay input[name='newName']{
+    width: 50%;
+}
+.setting-overlay input[name='newHora'],.setting-overlay input[name='newMin']{
+    background: #4A4A4A;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color:#fff;
+    display: inline-block;
+}
+.setting-overlay .confirm-name,.setting-overlay .confirm-time{
+    display: none;
+}
+
+.changeTimeForm{
+    display:none;
+}

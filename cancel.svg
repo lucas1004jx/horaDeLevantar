@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="35px" viewBox="0 0 34 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>cancel</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+    <g id="cancel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Mobile" transform="translate(-66.000000, -612.000000)" fill-rule="nonzero" stroke="#50E3C2" stroke-width="3">
+            <g id="cancel" transform="translate(67.000000, 614.000000)">
+                <path d="M0.5,0.5 L30.7654919,30.7654919" id="Line-2"></path>
+                <path d="M0.5,0.5 L30.7654919,30.7654919" id="Line-2" transform="translate(15.500000, 15.500000) scale(1, -1) translate(-15.500000, -15.500000) "></path>
+            </g>
+        </g>
+    </g>
+    </defs>
+</svg>
