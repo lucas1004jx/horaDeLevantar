@@ -3,6 +3,7 @@
     const $window=$(window);
     let wWidth=$window.width();
     const $nextBtns=$('.next');
+    const $preBtn=$('.previous');
     const $container=$('.container');
     const $user_name=$('.user-name');
     const $input_name=$('input[name="name"]');
@@ -56,6 +57,8 @@
     $nextBtns.each((index,el)=>{
       $(el).click(nextPage); 
     });
+    
+    $preBtn.click(previousPage);
 
     function nextPage(){
         $container.css({
@@ -63,6 +66,16 @@
         });
         page++;
     }
+
+   
+    
+   function previousPage(){
+    page--;
+    $container.css({
+      'transform':'translateX(-'+wWidth*(page-1)+'px)'
+  });
+  
+   }
 
     $input_name.keyup(storeName);
     $input_hora_entra.keyup(storeEnterHour);
@@ -77,27 +90,27 @@
     }
 
     function storeEnterHour(){
-      let hour=$(this).val();
+      let hour=$(this).val().trim()==''?0:$(this).val().trim();
       enterHour=hour<10?'0'+hour:hour;
       $hour_enter.text(enterHour);
     }
     function storeEnterMin(){
-      let min=$(this).val();
+      let min=$(this).val().trim()==''?0:$(this).val().trim();
       enterMin=min<10?'0'+min:min;
       $min_enter.text(enterMin);
     }
     function storePrepareHour(){
-      let hour = $(this).val();
+      let hour = $(this).val().trim()==''?0:$(this).val().trim();
       localStorage.setItem('prepareHour',hour);
       storedHour=localStorage.getItem('prepareHour');
       $hour_prepare.text(`${storedHour == ''?0:storedHour} hora y `);
       
     }
     function sotrePrepareMin(){
-     let min = $(this).val();
+     let min = $(this).val().trim()==''?0:$(this).val().trim();
      localStorage.setItem('prepareMin',min);
      storedMin=localStorage.getItem('prepareMin');
-      $min_prepare.text(`${storedMin==null?0:storedMin} minutos`);
+      $min_prepare.text(`${storedMin==''?0:storedMin} minutos`);
     }
     
 
