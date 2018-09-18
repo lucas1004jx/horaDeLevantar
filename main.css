@@ -74,6 +74,9 @@ html,body{
    font-size: 30px;
    color:#fff;
    text-transform: capitalize;
+   -webkit-appearance: none;
+        -moz-appearance:none;
+        appearance:none; 
 }
 .inner-container input[name='name']{
     width: 200px;
