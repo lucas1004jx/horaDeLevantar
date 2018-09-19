@@ -2,7 +2,6 @@
 #4A4A4A*/
 
 html,body{
-    width: 100vw;
     height: 100vh;
     min-height: 560px;
     overflow-x: hidden;
@@ -35,6 +34,7 @@ html,body{
 
 .page h2{
     display: inline-block;
+    text-align: center;
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 5px;
