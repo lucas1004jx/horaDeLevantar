@@ -47,11 +47,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "ffeacd5c0e08137e81b6aae32ee5990e"
+    "revision": "1a6570166ccf5e0d0ce65097d66a2ea0"
   },
   {
     "url": "js/app.js",
-    "revision": "6adc98e59d9508a35faf802b42657fd6"
+    "revision": "f3035ac3907dfe354f6f817182b9385b"
   },
   {
     "url": "js/jquery-3.2.1.min.js",
@@ -59,11 +59,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "main.css",
-    "revision": "0eb4a6dbf1f5a20599d3877feff9e45b"
+    "revision": "9243e2b1dd758000c4f797770369d917"
   },
   {
     "url": "manifest.json",
-    "revision": "0826ba7fcc09d4905265df6e6ca42432"
+    "revision": "cf2821bf010625f10e0e3f9545b14642"
   },
   {
     "url": "src-sw.js",
