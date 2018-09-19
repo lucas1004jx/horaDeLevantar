@@ -67,7 +67,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "src-sw.js",
-    "revision": "aee368f80e75e943f1979b46ef966503"
+    "revision": "7627ab82980cc3c071f35a9055bc4c23"
   },
   {
     "url": "workbox-config.js",
@@ -91,7 +91,7 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-  /\.(?:js|css|html)$/,
+  new RegExp ('\.(?:js|css|html)$'),
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'static-resources',
   }),

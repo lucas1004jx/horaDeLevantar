@@ -18,7 +18,7 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-  /\.(?:js|css|html)$/,
+  new RegExp ('\.(?:js|css|html)$'),
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'static-resources',
   }),
