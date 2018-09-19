@@ -16,3 +16,10 @@ workbox.routing.registerRoute(
     ],
   }),
 );
+
+workbox.routing.registerRoute(
+  /\.(?:js|css|html)$/,
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'static-resources',
+  }),
+);
