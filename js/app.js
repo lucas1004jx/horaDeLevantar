@@ -198,6 +198,8 @@ $confrimTime_btn.click(()=>{
   showTime();
 });
 
+console.log('update');
+
 })()
 
 

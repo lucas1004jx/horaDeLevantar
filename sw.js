@@ -51,7 +51,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "js/app.js",
-    "revision": "f3035ac3907dfe354f6f817182b9385b"
+    "revision": "c8b1f5d6a8d0289ec7553258d272b417"
   },
   {
     "url": "js/jquery-3.2.1.min.js",
@@ -59,7 +59,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "main.css",
-    "revision": "9243e2b1dd758000c4f797770369d917"
+    "revision": "a5492cf65bf2b326d960a6bb764c2d11"
   },
   {
     "url": "manifest.json",
