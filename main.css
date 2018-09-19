@@ -94,7 +94,7 @@ html,body{
 }
 .inner-container button{
     position: absolute;
-    bottom: 0;
+    top:100%;
     background-color: #4A4A4A;
     color:#fff;
     margin-top: 20px;
