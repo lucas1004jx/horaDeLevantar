@@ -89,25 +89,41 @@
         localStorage.setItem('name',name);
     }
 
-    function storeEnterHour(){
-      let hour=$(this).val().trim()==''?0:$(this).val().trim();
-      enterHour=hour<10?'0'+hour:hour;
+    function validateValue(ele,limit){
+    let value=$(ele).val().trim();
+    $(ele).val(value);
+    if(value.length>2 &&value[0] !=0 ){ 
+      $(ele).val(value.slice(0,2));
+    }else if(value.length>2 &&value[0] ==0){
+      $(ele).val(value.slice(1,3));
+    }
+    value==''?0:value;
+    value=Math.abs(value);
+    value=value<10?'0'+value:value>=limit?$(ele).val('0'):value;
+    return $(ele).val();
+    }
+    function storeEnterHour(){ 
+      that=this;
+      enterHour=validateValue(that,24);
       $hour_enter.text(enterHour);
+      
     }
     function storeEnterMin(){
-      let min=$(this).val().trim()==''?0:$(this).val().trim();
-      enterMin=min<10?'0'+min:min;
+      that=this;
+      enterMin=validateValue(that,60);
       $min_enter.text(enterMin);
     }
     function storePrepareHour(){
-      let hour = $(this).val().trim()==''?0:$(this).val().trim();
+      that=this;
+      let hour =validateValue(that,24);
       localStorage.setItem('prepareHour',hour);
       storedHour=localStorage.getItem('prepareHour');
       $hour_prepare.text(`${storedHour == ''?0:storedHour} hora y `);
       
     }
     function sotrePrepareMin(){
-     let min = $(this).val().trim()==''?0:$(this).val().trim();
+      that=this;
+     let min = validateValue(that,60);
      localStorage.setItem('prepareMin',min);
      storedMin=localStorage.getItem('prepareMin');
       $min_prepare.text(`${storedMin==''?0:storedMin} minutos`);

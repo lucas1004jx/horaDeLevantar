@@ -217,6 +217,7 @@ margin-top: 30px;
    color:#4A4A4A;
    text-transform: capitalize;
    display: none;
+   border-radius: none;
 }
 .setting-overlay input::placeholder{
     color:rgba(74, 74, 74, 0.5);
