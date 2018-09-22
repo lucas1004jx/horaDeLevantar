@@ -97,6 +97,10 @@ html,body{
 .inner-container input:focus::placeholder{
     color:transparent;
 }
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin:0;
+}
 .inner-container button{
     position: absolute;
     top:100%;
@@ -217,7 +221,7 @@ margin-top: 30px;
    color:#4A4A4A;
    text-transform: capitalize;
    display: none;
-   border-radius: none;
+   border-radius: 0;
 }
 .setting-overlay input::placeholder{
     color:rgba(74, 74, 74, 0.5);

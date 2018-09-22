@@ -88,7 +88,7 @@
         $user_name.text(` ${name}`);
         localStorage.setItem('name',name);
     }
-
+// validate input value, it only has to be numbers
     function validateValue(ele,limit){
     let value=$(ele).val().trim();
     $(ele).val(value);
@@ -136,6 +136,7 @@ $question_3.find('.next').click(showTime);
   function showTime(){
     
       let totalMin = Number(enterHour)*60+Number(enterMin)-Number(localStorage.getItem('prepareHour'))*60-Number(localStorage.getItem('prepareMin'));
+      totalMin=totalMin<0?(24*60+totalMin):totalMin;
       let hour = Math.floor(totalMin/60);
       let min = totalMin%60;
       animateCount($hour,hour);
